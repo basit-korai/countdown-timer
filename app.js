@@ -33,6 +33,7 @@ let tempYear = tempDate.getFullYear();
 let tempMonth = tempDate.getMonth();
 let tempDay = tempDate.getDate();
 
+// JS will always check for the date and add 2 more days to it. Which means the countdown will never end. I HAVE SPOKEN.
 const futureDate = new Date(tempYear, tempMonth, tempDay + 2, 12, 30, 0);
 
 
