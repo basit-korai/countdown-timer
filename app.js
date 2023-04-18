@@ -27,7 +27,14 @@ const deadline = document.querySelector(".deadline");
 const countdown = document.querySelectorAll(".deadline-format h4");
 
 // Date Setup
-const futureDate = new Date("April 30, 2023 12:30:00");
+// const futureDate = new Date("April 30, 2023 12:30:00"); Hard-coded value for testing purposes.
+const tempDate = new Date();
+let tempYear = tempDate.getFullYear();
+let tempMonth = tempDate.getMonth();
+let tempDay = tempDate.getDate();
+
+const futureDate = new Date(tempYear, tempMonth, tempDay + 2, 12, 30, 0);
+
 
 const weekday = weekdays[futureDate.getDay()];
 const monthdate = futureDate.getDate();
