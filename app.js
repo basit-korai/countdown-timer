@@ -74,7 +74,8 @@ function getRemainingTime() {
   const timeValues = [days, hours, minutes, seconds];
 
   countdown.forEach((item, index) => {
-    item.innerHTML = timeValues[index];
+    item.innerHTML = format(timeValues[index]);
+    console.log(timeValues[index]);
   });
 
   if (t < 0) {
@@ -88,4 +89,13 @@ function getRemainingTime() {
 // Note for my future self. Methods are still invoked even if they are assigned to a variable. Well, this one's working so i'm going to assume, so will others.
 let live = setInterval(getRemainingTime, 1000);
 
+function format(item) {
+  if (item < 10) {
+    return `0${item}`
+
+  } else {
+    return `${item}`;
+  }
+
+}
 getRemainingTime();
